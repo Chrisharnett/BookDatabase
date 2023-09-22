@@ -13,7 +13,7 @@ public class Book {
 
     /**
      * Constructor of a Book.
-     * @param ISBN
+     * @param ISBN ISBN
      * @param title
      * @param edition
      * @param copyright
