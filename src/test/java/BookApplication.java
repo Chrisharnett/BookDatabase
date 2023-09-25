@@ -81,14 +81,12 @@ public class BookApplication {
         String isbn = "";
         while (isbn.equals("")){
             System.out.println("ISBN: ");
-            isbn = scanner.next();
-            scanner.nextLine();
+            isbn = scanner.nextLine();
         }
         String title = "";
         while (title.equals("")){
             System.out.println("Title: ");
-            title = scanner.next();
-            scanner.nextLine();
+            title = scanner.nextLine();
         }
         int editionNumber = 0;
         while(editionNumber <= 0){
@@ -105,7 +103,7 @@ public class BookApplication {
         String copyright = "";
         while (copyright.equals("")){
             System.out.println("Copyright: ");
-            copyright = scanner.next();
+            copyright = scanner.nextLine();
             scanner.nextLine();
         }
         Book book = new Book(isbn, title, editionNumber, copyright);
