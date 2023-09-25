@@ -14,7 +14,6 @@ public class BookApplication {
 
         Scanner input = new Scanner(System.in);
         char c;
-//        List<Book> books = bdm.getBookList();
         do {
             printMenu();
             c = Character.toUpperCase(input.next().charAt(0));
@@ -61,11 +60,13 @@ public class BookApplication {
         String firstName = "";
         while (firstName.equals("")){
             firstName = scanner.next();
+            scanner.nextLine();
         }
         System.out.println("Author last name: ");
         String lastName = "";
         while (lastName.equals("")){
             lastName = scanner.next();
+            scanner.nextLine();
         }
         bdm.addNewAuthor(firstName, lastName);
     }
@@ -81,11 +82,13 @@ public class BookApplication {
         while (isbn.equals("")){
             System.out.println("ISBN: ");
             isbn = scanner.next();
+            scanner.nextLine();
         }
         String title = "";
         while (title.equals("")){
             System.out.println("Title: ");
             title = scanner.next();
+            scanner.nextLine();
         }
         int editionNumber = 0;
         while(editionNumber <= 0){
@@ -94,6 +97,7 @@ public class BookApplication {
                 editionNumber = scanner.nextInt();
             }catch(InputMismatchException e){
                 System.out.println("Invalid integer, try again.");
+                scanner.nextLine();
                 editionNumber=0;
             }
 
@@ -102,6 +106,7 @@ public class BookApplication {
         while (copyright.equals("")){
             System.out.println("Copyright: ");
             copyright = scanner.next();
+            scanner.nextLine();
         }
         Book book = new Book(isbn, title, editionNumber, copyright);
         bdm.addNewBook(book, bdm.getAuthorList().get(authorIndex));

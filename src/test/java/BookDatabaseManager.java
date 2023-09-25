@@ -17,12 +17,7 @@ public class BookDatabaseManager {
 
 // Constructor for Book DatabaseManager that takes no parameters.
     public BookDatabaseManager() {
-
-        try{
-            loadDatabase();
-        } catch(SQLException e){
-            e.printStackTrace();
-        }
+        loadDatabase();
     }
 
     public List<Book> getBookList() {
@@ -63,7 +58,7 @@ public class BookDatabaseManager {
         }
 
     }
-    private void loadDatabase() throws SQLException {
+    private void loadDatabase()  {
         bookList = new ArrayList<>();
         authorList = new ArrayList<>();
         loadBooks();
